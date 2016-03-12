@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
-    self.locationManager = pmaLocationManager()
-    self.locationManager!.startRangingBeacons(pmaLocationManager.locationSensingType.MainBuilding)
+//    self.locationManager = pmaLocationManager()
+//    self.locationManager!.startRangingBeacons(pmaLocationManager.locationSensingType.MainBuilding)
     
     return true
   }

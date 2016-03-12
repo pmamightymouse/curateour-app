@@ -9,46 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-  @IBOutlet weak var locationLabel: UILabel?
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    checkLoginStatus()
   }
   
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated);
-    NSNotificationCenter.defaultCenter().addObserver(
-      self,
-      selector: "locationChanged:",
-      name: "locationChanged",
-      object: nil)
+  @objc @IBAction func signOut(button: UIButton) {
+    UserDefaults.signOut()
+    checkLoginStatus()
   }
   
-  override func viewWillDisappear(animated: Bool) {
-    super.viewWillDisappear(animated);
-    NSNotificationCenter.defaultCenter().removeObserver(self)
-  }
-
-  @objc func locationChanged(notification: NSNotification){
-    NSLog("Received location changed notification")
-    if let userData = notification.userInfo {
-      if let location = userData["currentLocation"] as? pmaLocation {
-        self.setLocationLabelContent(location.name)
-      }
+  private func checkLoginStatus() {
+    if !UserDefaults.isLoggedIn() {
+      self.performSegueWithIdentifier("modal", sender: self);
     }
   }
   
-  func setLocationLabelContent(content : String) {
-    if let label = self.locationLabel {
-      label.text = content
-    }
-  }
-  
-
 }
 

@@ -8,13 +8,41 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var emailField: UITextField?
   @IBOutlet weak var passwordField: UITextField?
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
   
-  @IBAction func signIn(sender: UIButton) {
+  func textFieldShouldReturn( textField : UITextField) -> Bool {
+    signIn(textField)
+    return true;
+  }
+  
+  @IBAction func signIn(sender: UIView) {
+    
+    if let email = emailField!.text {
+      if let password = passwordField!.text {
+        activityIndicator!.startAnimating()
+        RestClient.validateCredentials(
+          email,
+          password: password,
+          successCallback: {
+            
+            UserDefaults.setLoggedIn(true)
+            UserDefaults.setEmail(email)
+            UserDefaults.setPassword(password)
+            
+            NSLog("Successfully logged in")
+            self.activityIndicator!.stopAnimating()
+            self.dismissViewControllerAnimated(true, completion: {})
+          },
+          failureCallback: {
+            self.activityIndicator!.stopAnimating()
+            NSLog("Failed to login")
+        })
+      }
+    }
     
   }
   

@@ -30,11 +30,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilh-at-Cgc">
+                                <rect key="frame" x="129" y="343" width="62" height="30"/>
+                                <state key="normal" title="Sign out!"/>
+                                <connections>
+                                    <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ti-o8-3b0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="locationLabel" destination="G2m-bv-Ql1" id="xfd-KB-zjf"/>
+                        <segue destination="tkk-m2-qW5" kind="modal" identifier="modal" id="xlc-D3-Fbx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -44,7 +51,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="Gdh-IB-b7K">
             <objects>
-                <viewController id="tkk-m2-qW5" customClass="SignInViewController" customModule="Curateour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="modal" id="tkk-m2-qW5" customClass="SignInViewController" customModule="Curateour" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uhl-lA-UqU"/>
                         <viewControllerLayoutGuide type="bottom" id="KXz-I7-YD7"/>
@@ -62,7 +69,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3o-d8-wFK">
                                 <rect key="frame" x="20" y="140" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tkk-m2-qW5" id="iaa-ht-iOJ"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npb-jL-Ljp">
                                 <rect key="frame" x="123" y="186" width="74" height="21"/>
@@ -73,7 +83,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0lF-TJ-5Vj">
                                 <rect key="frame" x="20" y="215" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tkk-m2-qW5" id="fmX-mM-cml"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZc-KV-b6K">
                                 <rect key="frame" x="114" y="273" width="92" height="22"/>
@@ -83,7 +96,7 @@
                                     <action selector="signIn:" destination="tkk-m2-qW5" eventType="touchUpInside" id="i1i-30-9xR"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YLV-dU-5BY">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YLV-dU-5BY">
                                 <rect key="frame" x="237" y="275" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -97,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G14-5C-vMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="-224"/>
+            <point key="canvasLocation" x="236" y="1236"/>
         </scene>
     </scenes>
 </document>
