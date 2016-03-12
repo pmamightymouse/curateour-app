@@ -33,11 +33,11 @@ public class pmaToolkit: NSObject {
         public static let maxBeaconsInRangeCount : Int = 20
         
         public struct cacheSettings {
-            public static var requestTimeout : Double = 10 //secs
-            public static var hostProtocol = "https"
+            public static var requestTimeout : Double = 60 //secs
+            public static var hostProtocol = "https://"
             public static var hostName = "curateour.herokuapp.com"
-            public static var urlBeacons = "/json/ibeacons.json"
-            public static var urlLocations = "/json/locations.json"
+            public static var urlBeacons = "json/ibeacons.json"
+            public static var urlLocations = "json/locations.json"
         }
         
     }

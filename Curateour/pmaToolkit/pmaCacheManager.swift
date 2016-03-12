@@ -12,7 +12,6 @@ import Foundation
 public class pmaCacheManager {
     
     public static func loadJSONFile(endpoint: String) -> JSON? {
-      NSLog("Loading data from: %s", endpoint)
         if let data = self.getData(self.constructURLForEndpoint(endpoint), ignoreCache: true) {
             let jsonData = JSON(data: data)
             
@@ -45,12 +44,13 @@ public class pmaCacheManager {
     }
     
     private static func getData(url: NSURL, ignoreCache: Bool = false) -> NSData? {
-        
+        NSLog("Loading data from: %@", url)
         let request = self.makeURLRequest(url, ignoreCache: ignoreCache)
         var data: NSData?
         do {
             data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
-        } catch _ as NSError {
+        } catch let e as NSError {
+          NSLog("Failed to load data with %@", e.localizedDescription)
             data = nil
         }
         

@@ -24,6 +24,8 @@
 		224347C61C94791A000C3CB2 /* pmaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347BF1C94791A000C3CB2 /* pmaObject.swift */; };
 		224347C71C94791A000C3CB2 /* pmaToolkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347C01C94791A000C3CB2 /* pmaToolkit.swift */; };
 		224347CB1C947976000C3CB2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347CA1C947976000C3CB2 /* SwiftyJSON.swift */; };
+		224347CD1C948FDD000C3CB2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347CC1C948FDD000C3CB2 /* SignInViewController.swift */; };
+		224347D01C94961A000C3CB2 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347CF1C94961A000C3CB2 /* RestClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		224347BF1C94791A000C3CB2 /* pmaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaObject.swift; path = pmaToolkit/pmaObject.swift; sourceTree = "<group>"; };
 		224347C01C94791A000C3CB2 /* pmaToolkit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaToolkit.swift; path = pmaToolkit/pmaToolkit.swift; sourceTree = "<group>"; };
 		224347CA1C947976000C3CB2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
+		224347CC1C948FDD000C3CB2 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		224347CF1C94961A000C3CB2 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				2243478D1C94707B000C3CB2 /* Assets.xcassets */,
 				2243478F1C94707B000C3CB2 /* LaunchScreen.storyboard */,
 				224347921C94707B000C3CB2 /* Info.plist */,
+				224347CC1C948FDD000C3CB2 /* SignInViewController.swift */,
+				224347CF1C94961A000C3CB2 /* RestClient.swift */,
 			);
 			path = Curateour;
 			sourceTree = "<group>";
@@ -303,9 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224347CD1C948FDD000C3CB2 /* SignInViewController.swift in Sources */,
 				224347CB1C947976000C3CB2 /* SwiftyJSON.swift in Sources */,
 				224347C11C94791A000C3CB2 /* pmaBeacon.swift in Sources */,
 				224347C21C94791A000C3CB2 /* pmaCacheManager.swift in Sources */,
+				224347D01C94961A000C3CB2 /* RestClient.swift in Sources */,
 				224347C31C94791A000C3CB2 /* pmaLocation.swift in Sources */,
 				224347C41C94791A000C3CB2 /* pmaLocationManager.swift in Sources */,
 				224347C51C94791A000C3CB2 /* pmaLocationManagerRodin.swift in Sources */,
