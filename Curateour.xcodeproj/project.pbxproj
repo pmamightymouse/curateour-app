@@ -14,6 +14,8 @@
 		224347911C94707B000C3CB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2243478F1C94707B000C3CB2 /* LaunchScreen.storyboard */; };
 		2243479C1C94707B000C3CB2 /* CurateourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2243479B1C94707B000C3CB2 /* CurateourTests.swift */; };
 		224347A71C94707B000C3CB2 /* CurateourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347A61C94707B000C3CB2 /* CurateourUITests.swift */; };
+		224347B61C94718F000C3CB2 /* pmaToolkit in Resources */ = {isa = PBXBuildFile; fileRef = 224347B41C94718F000C3CB2 /* pmaToolkit */; };
+		224347B71C94718F000C3CB2 /* SwiftyJSON in Resources */ = {isa = PBXBuildFile; fileRef = 224347B51C94718F000C3CB2 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		224347A21C94707B000C3CB2 /* CurateourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurateourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		224347A61C94707B000C3CB2 /* CurateourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurateourUITests.swift; sourceTree = "<group>"; };
 		224347A81C94707B000C3CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224347B41C94718F000C3CB2 /* pmaToolkit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pmaToolkit; sourceTree = "<group>"; };
+		224347B51C94718F000C3CB2 /* SwiftyJSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftyJSON; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		224347851C94707B000C3CB2 /* Curateour */ = {
 			isa = PBXGroup;
 			children = (
+				224347B41C94718F000C3CB2 /* pmaToolkit */,
+				224347B51C94718F000C3CB2 /* SwiftyJSON */,
 				224347861C94707B000C3CB2 /* AppDelegate.swift */,
 				224347881C94707B000C3CB2 /* ViewController.swift */,
 				2243478A1C94707B000C3CB2 /* Main.storyboard */,
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					224347821C94707B000C3CB2 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = WZWUP793NV;
 					};
 					224347961C94707B000C3CB2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -231,6 +238,8 @@
 			files = (
 				224347911C94707B000C3CB2 /* LaunchScreen.storyboard in Resources */,
 				2243478E1C94707B000C3CB2 /* Assets.xcassets in Resources */,
+				224347B61C94718F000C3CB2 /* pmaToolkit in Resources */,
+				224347B71C94718F000C3CB2 /* SwiftyJSON in Resources */,
 				2243478C1C94707B000C3CB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Curateour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pmamightymouse.Curateour;
@@ -408,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Curateour/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pmamightymouse.Curateour;
