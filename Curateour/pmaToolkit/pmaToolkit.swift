@@ -16,7 +16,7 @@ public class pmaToolkit: NSObject {
     
     public struct settings {
         
-        public static var iBeaconUUID = ""
+        public static var iBeaconUUID = "f7826da6-4fa2-4e98-8024-bc5b71e0893e"
         
         public static var scannedLocationBufferLength = 2
         
@@ -26,7 +26,7 @@ public class pmaToolkit: NSObject {
         
         public static var headingFilter : Double = 10 // degree
         
-        public static var logLevel = 3
+        public static var logLevel = 4
         
         public static let iBeaconIdentifier = "pmaHackathon"
         
@@ -34,10 +34,10 @@ public class pmaToolkit: NSObject {
         
         public struct cacheSettings {
             public static var requestTimeout : Double = 10 //secs
-            public static var hostProtocol = ""
-            public static var hostName = ""
-            public static var urlBeacons = ""
-            public static var urlLocations = ""
+            public static var hostProtocol = "https"
+            public static var hostName = "curateour.herokuapp.com"
+            public static var urlBeacons = "/json/ibeacons.json"
+            public static var urlLocations = "/json/locations.json"
         }
         
     }

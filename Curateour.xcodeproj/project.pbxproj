@@ -16,6 +16,14 @@
 		224347A71C94707B000C3CB2 /* CurateourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347A61C94707B000C3CB2 /* CurateourUITests.swift */; };
 		224347B61C94718F000C3CB2 /* pmaToolkit in Resources */ = {isa = PBXBuildFile; fileRef = 224347B41C94718F000C3CB2 /* pmaToolkit */; };
 		224347B71C94718F000C3CB2 /* SwiftyJSON in Resources */ = {isa = PBXBuildFile; fileRef = 224347B51C94718F000C3CB2 /* SwiftyJSON */; };
+		224347C11C94791A000C3CB2 /* pmaBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347BA1C94791A000C3CB2 /* pmaBeacon.swift */; };
+		224347C21C94791A000C3CB2 /* pmaCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347BB1C94791A000C3CB2 /* pmaCacheManager.swift */; };
+		224347C31C94791A000C3CB2 /* pmaLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347BC1C94791A000C3CB2 /* pmaLocation.swift */; };
+		224347C41C94791A000C3CB2 /* pmaLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347BD1C94791A000C3CB2 /* pmaLocationManager.swift */; };
+		224347C51C94791A000C3CB2 /* pmaLocationManagerRodin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347BE1C94791A000C3CB2 /* pmaLocationManagerRodin.swift */; };
+		224347C61C94791A000C3CB2 /* pmaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347BF1C94791A000C3CB2 /* pmaObject.swift */; };
+		224347C71C94791A000C3CB2 /* pmaToolkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347C01C94791A000C3CB2 /* pmaToolkit.swift */; };
+		224347CB1C947976000C3CB2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224347CA1C947976000C3CB2 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +57,16 @@
 		224347A21C94707B000C3CB2 /* CurateourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurateourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		224347A61C94707B000C3CB2 /* CurateourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurateourUITests.swift; sourceTree = "<group>"; };
 		224347A81C94707B000C3CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		224347B41C94718F000C3CB2 /* pmaToolkit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pmaToolkit; sourceTree = "<group>"; };
-		224347B51C94718F000C3CB2 /* SwiftyJSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftyJSON; sourceTree = "<group>"; };
+		224347B41C94718F000C3CB2 /* pmaToolkit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pmaToolkit; path = /Users/mauricio/projects/swift/Curateour/Curateour/pmaToolkit; sourceTree = "<absolute>"; };
+		224347B51C94718F000C3CB2 /* SwiftyJSON */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftyJSON; path = /Users/mauricio/projects/swift/Curateour/Curateour/SwiftyJSON; sourceTree = "<absolute>"; };
+		224347BA1C94791A000C3CB2 /* pmaBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaBeacon.swift; path = pmaToolkit/pmaBeacon.swift; sourceTree = "<group>"; };
+		224347BB1C94791A000C3CB2 /* pmaCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaCacheManager.swift; path = pmaToolkit/pmaCacheManager.swift; sourceTree = "<group>"; };
+		224347BC1C94791A000C3CB2 /* pmaLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaLocation.swift; path = pmaToolkit/pmaLocation.swift; sourceTree = "<group>"; };
+		224347BD1C94791A000C3CB2 /* pmaLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaLocationManager.swift; path = pmaToolkit/pmaLocationManager.swift; sourceTree = "<group>"; };
+		224347BE1C94791A000C3CB2 /* pmaLocationManagerRodin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaLocationManagerRodin.swift; path = pmaToolkit/pmaLocationManagerRodin.swift; sourceTree = "<group>"; };
+		224347BF1C94791A000C3CB2 /* pmaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaObject.swift; path = pmaToolkit/pmaObject.swift; sourceTree = "<group>"; };
+		224347C01C94791A000C3CB2 /* pmaToolkit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = pmaToolkit.swift; path = pmaToolkit/pmaToolkit.swift; sourceTree = "<group>"; };
+		224347CA1C947976000C3CB2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +117,8 @@
 		224347851C94707B000C3CB2 /* Curateour */ = {
 			isa = PBXGroup;
 			children = (
-				224347B41C94718F000C3CB2 /* pmaToolkit */,
-				224347B51C94718F000C3CB2 /* SwiftyJSON */,
+				224347C91C94794D000C3CB2 /* SwifityJSON */,
+				224347C81C94792E000C3CB2 /* pmaToolkit */,
 				224347861C94707B000C3CB2 /* AppDelegate.swift */,
 				224347881C94707B000C3CB2 /* ViewController.swift */,
 				2243478A1C94707B000C3CB2 /* Main.storyboard */,
@@ -129,6 +145,28 @@
 				224347A81C94707B000C3CB2 /* Info.plist */,
 			);
 			path = CurateourUITests;
+			sourceTree = "<group>";
+		};
+		224347C81C94792E000C3CB2 /* pmaToolkit */ = {
+			isa = PBXGroup;
+			children = (
+				224347BA1C94791A000C3CB2 /* pmaBeacon.swift */,
+				224347BB1C94791A000C3CB2 /* pmaCacheManager.swift */,
+				224347BC1C94791A000C3CB2 /* pmaLocation.swift */,
+				224347BD1C94791A000C3CB2 /* pmaLocationManager.swift */,
+				224347BE1C94791A000C3CB2 /* pmaLocationManagerRodin.swift */,
+				224347BF1C94791A000C3CB2 /* pmaObject.swift */,
+				224347C01C94791A000C3CB2 /* pmaToolkit.swift */,
+			);
+			name = pmaToolkit;
+			sourceTree = "<group>";
+		};
+		224347C91C94794D000C3CB2 /* SwifityJSON */ = {
+			isa = PBXGroup;
+			children = (
+				224347CA1C947976000C3CB2 /* SwiftyJSON.swift */,
+			);
+			name = SwifityJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +303,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224347CB1C947976000C3CB2 /* SwiftyJSON.swift in Sources */,
+				224347C11C94791A000C3CB2 /* pmaBeacon.swift in Sources */,
+				224347C21C94791A000C3CB2 /* pmaCacheManager.swift in Sources */,
+				224347C31C94791A000C3CB2 /* pmaLocation.swift in Sources */,
+				224347C41C94791A000C3CB2 /* pmaLocationManager.swift in Sources */,
+				224347C51C94791A000C3CB2 /* pmaLocationManagerRodin.swift in Sources */,
+				224347C61C94791A000C3CB2 /* pmaObject.swift in Sources */,
+				224347C71C94791A000C3CB2 /* pmaToolkit.swift in Sources */,
 				224347891C94707B000C3CB2 /* ViewController.swift in Sources */,
 				224347871C94707B000C3CB2 /* AppDelegate.swift in Sources */,
 			);

@@ -7,11 +7,12 @@
 //
 
 import Foundation
-import SwiftyJSON
+//import SwiftyJSON
 
 public class pmaCacheManager {
     
     public static func loadJSONFile(endpoint: String) -> JSON? {
+      NSLog("Loading data from: %s", endpoint)
         if let data = self.getData(self.constructURLForEndpoint(endpoint), ignoreCache: true) {
             let jsonData = JSON(data: data)
             

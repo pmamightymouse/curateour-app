@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import CoreLocation
-import SwiftyJSON
+//import SwiftyJSON
 import CoreBluetooth
 import MediaPlayer
 
@@ -68,7 +68,9 @@ public class pmaLocationManager : NSObject, CLLocationManagerDelegate {
                         
                         self.beacons.append(newBeacon)
                     }
-                }
+                } else {
+                  NSLog("Failed to load beacons")
+              }
             }
             dispatch_async(dispatch_get_main_queue()) {
                 completionHandler()
