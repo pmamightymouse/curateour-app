@@ -10,44 +10,86 @@ import Foundation
 import Alamofire
 
 class RestClient {
-
+  
   static func buildUrl( path : String ) -> String {
     return "https://curateour.herokuapp.com/\(path).json"
+  }
+  
+  static func createTour(
+    name : String,
+    email: String?,
+    password: String?,
+    successCallback: Tour? -> Void,
+    errorCallback: NSError -> Void ) {
+      
+      let parameters = [
+        "tour": [
+          "name" : name
+        ]
+      ]
+      
+      Alamofire.request( .POST,
+        buildUrl("api/v1/tours"),
+        parameters: parameters,
+        encoding: .JSON
+        )
+        .authenticate(user: email ?? "", password: password ?? "")
+        .responseJSON(
+          completionHandler: handleResponse(
+            {
+              result in
+              successCallback(Tour.fromJSON(result))
+            },
+            errorCallback: errorCallback))
+  }
+  
+  static func createStop() {
+    
   }
   
   static func validateCredentials(
     email: String,
     password: String,
-    successCallback: Void -> Void,
-    failureCallback: Void -> Void
+    successCallback: JSON -> Void,
+    errorCallback: NSError -> Void
     ) {
       
-    let parameters = [
-      "user" : [
-        "email" : email,
-        "password" : password
+      let parameters = [
+        "user" : [
+          "email" : email,
+          "password" : password
+        ]
       ]
-    ]
-    
-    Alamofire.request( .POST,
-      buildUrl("api/v1/session"),
-      parameters: parameters).responseJSON { response in
+      
+      Alamofire.request( .POST,
+        buildUrl("api/v1/session"),
+        encoding: .JSON,
+        parameters: parameters).responseJSON(
+          completionHandler: handleResponse(
+            successCallback,
+            errorCallback: errorCallback))
+  }
+  
+  static func handleResponse(
+    successCallback: JSON -> Void,
+    errorCallback: NSError -> Void) -> Response<AnyObject, NSError> -> Void {
+      
+      return {
+        response in
         if let error = response.result.error {
-          NSLog("failed to load the data from heroku - %@", error.localizedDescription)
+          NSLog("Failed to process request: \(error.localizedDescription)")
           dispatch_async(dispatch_get_main_queue(),{
-            failureCallback()
+            errorCallback(error)
           })
         } else if let value = response.result.value {
-          NSLog("Received ok response from server - \(value)")
+          NSLog("Correctly processed response: \(value)")
           dispatch_async(dispatch_get_main_queue(),{
-            successCallback()
+            successCallback(JSON(value))
           })
         } else {
-          NSLog("Response was not a result nor an error")
+          NSLog("Unexpected response, not sure what to do about it")
         }
-    }
-    
-    
+      }
   }
   
 }

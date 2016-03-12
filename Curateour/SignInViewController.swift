@@ -21,27 +21,25 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
   
   @IBAction func signIn(sender: UIView) {
     
-    if let email = emailField!.text {
-      if let password = passwordField!.text {
-        activityIndicator!.startAnimating()
-        RestClient.validateCredentials(
-          email,
-          password: password,
-          successCallback: {
-            
-            UserDefaults.setLoggedIn(true)
-            UserDefaults.setEmail(email)
-            UserDefaults.setPassword(password)
-            
-            NSLog("Successfully logged in")
-            self.activityIndicator!.stopAnimating()
-            self.dismissViewControllerAnimated(true, completion: {})
-          },
-          failureCallback: {
-            self.activityIndicator!.stopAnimating()
-            NSLog("Failed to login")
-        })
-      }
+    if let email = emailField!.text, let password = passwordField!.text {
+      activityIndicator!.startAnimating()
+      RestClient.validateCredentials(
+        email,
+        password: password,
+        successCallback: { result in
+          
+          UserDefaults.setLoggedIn(true)
+          UserDefaults.setEmail(email)
+          UserDefaults.setPassword(password)
+          
+          NSLog("Successfully logged in")
+          self.activityIndicator!.stopAnimating()
+          self.dismissViewControllerAnimated(true, completion: {})
+        },
+        errorCallback: { error in
+          self.activityIndicator!.stopAnimating()
+          NSLog("Failed to login")
+      })
     }
     
   }
