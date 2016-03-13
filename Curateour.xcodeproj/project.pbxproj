@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		220A29BE1C94A80A0094AC6E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220A29BD1C94A80A0094AC6E /* UserDefaults.swift */; };
 		22288D631C95A27000A4E62C /* StopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22288D621C95A27000A4E62C /* StopViewController.swift */; };
+		22288D651C95D4E700A4E62C /* IMG_6599-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22288D641C95D4E700A4E62C /* IMG_6599-2.jpg */; };
+		22288D671C95D50300A4E62C /* 2009-117-2v1-pma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22288D661C95D50300A4E62C /* 2009-117-2v1-pma.jpg */; };
 		22390B951C94D23500B56FEA /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22390B941C94D23500B56FEA /* Tour.swift */; };
 		22390B971C94D81500B56FEA /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22390B961C94D81500B56FEA /* Stop.swift */; };
 		22390B991C94DC2D00B56FEA /* collection.json in Resources */ = {isa = PBXBuildFile; fileRef = 22390B981C94DC2D00B56FEA /* collection.json */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		220A29BD1C94A80A0094AC6E /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		22288D621C95A27000A4E62C /* StopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopViewController.swift; sourceTree = "<group>"; };
+		22288D641C95D4E700A4E62C /* IMG_6599-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "IMG_6599-2.jpg"; path = "../../../../Desktop/PMA Hackathon/love tour images/IMG_6599-2.jpg"; sourceTree = "<group>"; };
+		22288D661C95D50300A4E62C /* 2009-117-2v1-pma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "2009-117-2v1-pma.jpg"; path = "../../../../Desktop/PMA Hackathon/love tour images/2009-117-2v1-pma.jpg"; sourceTree = "<group>"; };
 		22390B941C94D23500B56FEA /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 		22390B961C94D81500B56FEA /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		22390B981C94DC2D00B56FEA /* collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = collection.json; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 		224347851C94707B000C3CB2 /* Curateour */ = {
 			isa = PBXGroup;
 			children = (
+				22288D661C95D50300A4E62C /* 2009-117-2v1-pma.jpg */,
+				22288D641C95D4E700A4E62C /* IMG_6599-2.jpg */,
 				22390B981C94DC2D00B56FEA /* collection.json */,
 				224347C91C94794D000C3CB2 /* SwifityJSON */,
 				224347C81C94792E000C3CB2 /* pmaToolkit */,
@@ -338,6 +344,8 @@
 				224347B61C94718F000C3CB2 /* pmaToolkit in Resources */,
 				224347B71C94718F000C3CB2 /* SwiftyJSON in Resources */,
 				2243478C1C94707B000C3CB2 /* Main.storyboard in Resources */,
+				22288D671C95D50300A4E62C /* 2009-117-2v1-pma.jpg in Resources */,
+				22288D651C95D4E700A4E62C /* IMG_6599-2.jpg in Resources */,
 				22390B991C94DC2D00B56FEA /* collection.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

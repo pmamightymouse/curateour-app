@@ -45,7 +45,15 @@ class ToursViewController : UITableViewController {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    NSLog("Row \(indexPath.row) selected")    
+    let tour = tours[indexPath.item]
+    NSLog("Row \(indexPath.row) selected - \(tour.stops.count)")
+    if
+      let stop = tour.stops.first,
+      let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("StopViewController") as? StopViewController {
+        viewController.stop = stop
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
   }
   
   

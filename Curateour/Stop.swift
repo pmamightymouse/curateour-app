@@ -12,7 +12,6 @@ class Stop {
   
   let id : Int?
   let title : String
-  let mediaType : String
   let media : String
   let itemId : String
   let tourId : Int
@@ -24,12 +23,10 @@ class Stop {
     itemId : String,
     tourId : Int,
     stopNumber : Int,
-    mediaType : String = "text",
     id : Int? = Optional.None
     ) {
       self.title = title
       self.media = media
-      self.mediaType = mediaType
       self.itemId = itemId
       self.tourId = tourId
       self.stopNumber = stopNumber
@@ -41,7 +38,6 @@ class Stop {
     if
       let title = json["title"].string,
       let media = json["media"].string,
-      let mediaType = json["media_type"].string,
       let itemId = json["item_id"].string,
       let tourId = json["tour_id"].int,
       let stopNumber = json["stop_number"].int,
@@ -53,7 +49,6 @@ class Stop {
         itemId: itemId,
         tourId: tourId,
         stopNumber: stopNumber,
-        mediaType: mediaType,
         id: id
       )
     } else {

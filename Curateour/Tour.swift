@@ -24,6 +24,7 @@ class Tour {
       var stops = [Stop]()
       
       for (_,subJson):(String, JSON) in json["stops"] {
+        NSLog("found stop")
         if let item = Stop.fromJSON(subJson) {
           stops.append(item)
         }

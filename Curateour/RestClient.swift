@@ -12,7 +12,7 @@ import Alamofire
 class RestClient {
   
   static func buildUrl( path : String ) -> String {
-    return "http://localhost:3000/\(path).json"
+    return "https://curateour.herokuapp.com/\(path).json"
   }
   
   static func listTours(

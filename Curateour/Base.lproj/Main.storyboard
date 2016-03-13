@@ -62,7 +62,7 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pbP-SW-G9E">
                                         <rect key="frame" x="8" y="8" width="264" height="114"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6jy-PV-OZC">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_6599-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6jy-PV-OZC">
                                                 <rect key="frame" x="0.0" y="0.0" width="264" height="114"/>
                                             </imageView>
                                         </subviews>
@@ -99,7 +99,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCw-I3-bRW">
                                 <rect key="frame" x="20" y="425" width="133" height="128"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8l-LK-ydH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2009-117-2v1-pma.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="g8l-LK-ydH">
                                         <rect key="frame" x="8" y="8" width="117" height="112"/>
                                     </imageView>
                                 </subviews>
@@ -253,4 +253,8 @@
             <point key="canvasLocation" x="236" y="451"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2009-117-2v1-pma.jpg" width="177" height="147"/>
+        <image name="IMG_6599-2.jpg" width="960" height="1280"/>
+    </resources>
 </document>
