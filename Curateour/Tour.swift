@@ -12,6 +12,7 @@ class Tour {
   
   let id : Int
   let name : String
+  var stops : [Stop] = [Stop]()
   
   init(id : Int, name: String) {
     self.id = id
@@ -20,7 +21,18 @@ class Tour {
   
   static func fromJSON( json : JSON ) -> Tour? {
     if let name = json["name"].string, let id = json["id"].int {
-      return Tour(id: id, name: name)
+      var stops = [Stop]()
+      
+      for (_,subJson):(String, JSON) in json["stops"] {
+        if let item = Stop.fromJSON(subJson) {
+          stops.append(item)
+        }
+      }
+    
+      let tour = Tour(id: id, name: name)
+      tour.stops = stops
+      
+      return tour
     } else {
       return Optional.None
     }

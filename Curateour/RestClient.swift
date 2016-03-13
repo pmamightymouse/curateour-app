@@ -12,7 +12,41 @@ import Alamofire
 class RestClient {
   
   static func buildUrl( path : String ) -> String {
-    return "https://curateour.herokuapp.com/\(path).json"
+    return "http://localhost:3000/\(path).json"
+  }
+  
+  static func listTours(
+    email : String?,
+    password: String?,
+    successCallback: [Tour] -> Void,
+    errorCallback: NSError -> Void
+    ) {
+      
+      NSLog("Listing tours")
+      
+      Alamofire.request( .GET,
+        buildUrl("api/v1/tours"),
+        encoding: .JSON
+        )
+        .authenticate(user: email ?? "", password: password ?? "")
+        .responseJSON(
+          completionHandler: handleResponse(
+            {
+              result in
+              
+              var tours = [Tour]()
+              
+              for (_,subJson):(String, JSON) in result {
+                if let tour = Tour.fromJSON(subJson) {
+                  tours.append(tour)
+                }
+              }
+              
+              successCallback(tours)
+            },
+            errorCallback: errorCallback))
+      
+      
   }
   
   static func createTour(

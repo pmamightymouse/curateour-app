@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Curateour
 //
 //  Created by Maurício Linhares on 3/12/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController : UINavigationController {
   
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
@@ -20,10 +20,6 @@ class ViewController: UIViewController {
     checkLoginStatus()
   }
   
-  @objc @IBAction func viewTours(button: UIButton) {
-    self.performSegueWithIdentifier("toTours", sender: self);
-  }
-  
   private func checkLoginStatus() {
     if !UserDefaults.isLoggedIn() {
       self.performSegueWithIdentifier("modal", sender: self);
@@ -31,4 +27,3 @@ class ViewController: UIViewController {
   }
   
 }
-
