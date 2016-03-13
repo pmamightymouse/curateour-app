@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
   var locationManager: pmaLocationManager?
+  var collection : [Item] = [Item]()
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -20,6 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //    self.locationManager = pmaLocationManager()
 //    self.locationManager!.startRangingBeacons(pmaLocationManager.locationSensingType.MainBuilding)
+    
+    if let path = NSBundle.mainBundle().pathForResource("collection", ofType: "json") {
+      if let data = NSData(contentsOfFile: path) {
+        let json = JSON(data: data)
+        
+        for (_,subJson):(String, JSON) in json {
+          if let item = Item.fromJSON(subJson) {
+            collection.append(item)
+          }
+        }
+      }
+    }
     
     return true
   }
